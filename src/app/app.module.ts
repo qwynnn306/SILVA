@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatToolbarModule,
     MatExpansionModule,
     MatDividerModule,
+    MatInputModule,
     
       ],
   providers: [],
