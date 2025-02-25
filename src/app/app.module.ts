@@ -15,7 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
-
+import { HttpClientModule } from '@angular/common/http';
+import { PostsService } from './posts /posts.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatInputModule } from '@angular/material/input';
     MatExpansionModule,
     MatDividerModule,
     MatInputModule,
+    HttpClientModule,
     
       ],
   providers: [],
