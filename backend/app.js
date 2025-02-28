@@ -1,6 +1,10 @@
 const express = require('express');
-
 const app = express();
+const bosyParser = require('body-parser');
+
+
+app.use(bosyParser.json());
+app.use(bosyParser.urlencoded({extended: false}));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', "*");
@@ -12,11 +16,19 @@ app.use((req, res, next) => {
     next();
 })
 
+app.post('/api/posts', (req, res, next) => {
+    const post = req.body;
+    console.log(post);
+    res.status(201).json({
+        message: 'Post Added Successfully'
+    });
+})
+
 app.use('/api/posts', (req, res, next) => {
     const posts = 
         [{
             id: "fadf12421l",
-            title: "First server-side post",
+            title: "First server-side postiuytrew",
             content: "first from server-side"
         },
         {
