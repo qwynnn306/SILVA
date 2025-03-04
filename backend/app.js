@@ -1,7 +1,17 @@
 const express = require('express');
-const app = express();
 const bosyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Post = require('./models/post');
 
+const app = express();
+
+mongoose.connect("mongodb+srv://aly:alayssa01@myapp.tn7ao.mongodb.net/?retryWrites=true&w=majority&appName=myapp")
+    .then(() => {
+        console.log('Connected to the database');
+    })
+    .catch(() => {
+        console.log('Connection Failed');
+    })
 
 app.use(bosyParser.json());
 app.use(bosyParser.urlencoded({extended: false}));
