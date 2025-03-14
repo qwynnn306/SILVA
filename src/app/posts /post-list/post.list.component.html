@@ -1,17 +1,15 @@
 <mat-card>
-    <mat-accordion class="margintop" multi="true" *ngIf="posts.length>=0">
+    <mat-accordion class="margintop" muilti="true" *ngIf="posts.length>=0">
         <mat-expansion-panel *ngFor="let post of posts">
-            <mat-expansion-panel-header> 
-                {{post.title}}
-            </mat-expansion-panel-header>
-            <p>
-                {{post.content}}
-            </p>
-            <mat-action-row>
-                <button mat-button="accent">Edit</button>
-                <button mat-button="accent">Delete</button>
-            </mat-action-row>
-        </mat-expansion-panel>
-    </mat-accordion>
-        <p *ngIf="posts.length<=0">No post added yet!</p>
-</mat-card>
+              <mat-expansion-panel-header>
+                  {{ post.title }}
+              </mat-expansion-panel-header>
+                  <p>{{ post.content }}</p>
+                  <mat-action-row>
+                      <button mat-button >Edit</button>
+                      <button mat-button (click)="onDelete(post.id)">Delete</button>
+                  </mat-action-row>
+          </mat-expansion-panel>
+      </mat-accordion>
+      <p *ngIf="posts.length<=0">No posts added yet!</p>
+  </mat-card>
