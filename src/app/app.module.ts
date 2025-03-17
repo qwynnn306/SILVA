@@ -17,6 +17,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsService } from './posts /posts.service';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PostsService } from './posts /posts.service';
     MatDividerModule,
     MatInputModule,
     HttpClientModule,
+    AppRoutingModule,
     
       ],
   providers: [],
