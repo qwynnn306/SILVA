@@ -2,3 +2,8 @@
     width: 80%;
 
 }
+
+.spinner {
+    display: block;
+    margin: auto;
+  }
